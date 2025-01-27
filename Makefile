@@ -1,5 +1,5 @@
 ### PROGRAM NAME ###
-NAME		:= minishell_le_second
+NAME		:= minishell
 
 ### UTILS ###
 CC 			:= clang

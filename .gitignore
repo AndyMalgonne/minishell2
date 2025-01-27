@@ -4,5 +4,5 @@
 objs/
 .dist/
 .DS_Store
-minishell_le_second
+minishell
 .vscode/settings.json
