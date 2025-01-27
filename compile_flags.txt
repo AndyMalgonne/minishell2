@@ -2,3 +2,4 @@
 -Werror
 -Wextra
 -Iinclude
+-Ilibft/include
