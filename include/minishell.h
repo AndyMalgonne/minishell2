@@ -6,7 +6,7 @@
 /*   By: abasdere <abasdere@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/27 09:51:13 by andymalgonn       #+#    #+#             */
-/*   Updated: 2025/01/27 13:05:08 by abasdere         ###   ########.fr       */
+/*   Updated: 2025/01/27 19:17:39 by abasdere         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,8 @@
 # include <sys/stat.h>
 # include <sys/types.h>
 # include <termios.h>
+# include <stdio.h>
+# include <stdlib.h>
 
 typedef enum e_iotype
 {
