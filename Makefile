@@ -38,6 +38,10 @@ define INCLUDES	:=
 endef
 INCLD_FLAG 	:= ${addprefix -I , ${INCLUDES}}
 
+define INCLD_FILES :=
+	minishell.h
+endef
+
 ### LIB ###
 LIBFT		:= ${LIBFT_DIR}/libft.a
 LIB 		:= ${LIBFT}
@@ -100,5 +104,13 @@ norm: ; @make -C ${LIBFT_DIR} norm ${MAKE_FLAG}
 ## WATCH NORM ##
 watch:
 	watch norminette ${SRC_DIR} ${INCLD_DIR}
+
+format:
+	@for file in $(SRC); do \
+		c_formatter_42 $(SRC_DIR)/$$file; \
+	done
+	@for file in $(INCLD_FILES); do \
+		c_formatter_42 $(INCLD_DIR)/$$file; \
+	done
 
 .PHONY: all clean fclean re cleanlib fcleanlib relib norm watch format
