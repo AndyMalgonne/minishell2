@@ -54,7 +54,6 @@ DEPS		:= ${patsubst %.c,${OBJS_DIR}/%.d,${SRC}}
 
 ### PROJECT ###
 
-.PHONY: all
 all: ${NAME}
 
 ${NAME}: ${LIB} ${OBJS}
@@ -70,42 +69,36 @@ ${OBJS_DIR}/%.o: ${SRC_DIR}/%.c
 	@mkdir -p ${OBJS_DIR}/$(EXEC_DIR)
 	@${CC} ${DEP_FLAGS} ${CFLAGS} ${INCLD_FLAG} -c $< -o $@
 
-.PHONY: clean
 clean:
 	@printf "${PURPLE}[${NAME}] ${RED}Cleaning ${DEFAULT}${OBJS_DIR} files.\n"
 	@${RM} ${OBJS_DIR} ${OBJS_BONUS_DIR}
 
-.PHONY: fclean
 fclean: clean
 	@printf "${PURPLE}[${NAME}] ${RED}Cleaning ${DEFAULT}${NAME}.\n"
 	@${RM} ${NAME}
 
-.PHONY: re
 re: fclean all
 
 ### LIBFT ###
 ${LIBFT}:
 	@make -C ${LIBFT_DIR} ${MAKE_FLAG}
 
-.PHONY: cleanlib
 cleanlib:
 	@make -C ${LIBFT_DIR} clean ${MAKE_FLAG}
 
-.PHONY: fcleanlib
 fcleanlib:
 	@make -C ${LIBFT_DIR} fclean ${MAKE_FLAG}
 	@printf "${DRED}[${LIBFT_DIR}] Library cleaned.\n"
 
-.PHONY: relib
 relib:
 	@make -C ${LIBFT_DIR} re ${MAKE_FLAG}
 
 ### NORM ###
-.PHONY: norm
 norm: ; @make -C ${LIBFT_DIR} norm ${MAKE_FLAG}
 	@norminette ${SRC_DIR} ${INCLD_DIR}
 
 ## WATCH NORM ##
-.PHONY: watch
 watch:
 	watch norminette ${SRC_DIR} ${INCLD_DIR}
+
+.PHONY: all clean fclean re cleanlib fcleanlib relib norm watch format
