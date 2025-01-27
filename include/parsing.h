@@ -1,29 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   parsing.h                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: abasdere <abasdere@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/01/27 09:50:52 by andymalgonn       #+#    #+#             */
-/*   Updated: 2025/01/27 19:09:00 by abasdere         ###   ########.fr       */
+/*   Created: 2025/01/27 13:27:45 by abasdere          #+#    #+#             */
+/*   Updated: 2025/01/27 19:04:58 by abasdere         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "parsing.h"
+#ifndef PARSING_H
+# define PARSING_H
 
-int	g_signal = 0;
+# include "minishell.h"
 
-int	main(int argc, char **argv __attribute__((unused)), char **envp)
-{
-	t_env *env	__attribute__((__cleanup__(free_env)));
+int		create_env(t_env **env, char **envp);
+void	free_env(t_env **env);
 
-	env = NULL;
-	if (argc != 1)
-		return (ft_putstr_fd("Usage: ./minishell\n", 2), 1);
-	if (isatty(0) != 1)
-		return (printf("U mad bro?\n"));
-	if (!create_env(&env, envp))
-		return (1);
-	return (0);
-}
+#endif

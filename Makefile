@@ -40,6 +40,7 @@ INCLD_FLAG 	:= ${addprefix -I , ${INCLUDES}}
 
 define INCLD_FILES :=
 	minishell.h
+	parsing.h
 endef
 
 ### LIB ###
@@ -50,6 +51,7 @@ LIB 		:= ${strip ${LIB}}
 ### SRCS ###
 define SRC 	:=
 	main.c
+	env.c
 endef
 
 SRC 		:= ${strip ${SRC}}
