@@ -1,5 +1,5 @@
 ### PROGRAM NAME ###
-NAME		:= minishell_le_second
+NAME		:= minishell
 
 ### UTILS ###
 CC 			:= clang
@@ -45,18 +45,6 @@ LIB 		:= ${strip ${LIB}}
 
 ### SRCS ###
 define SRC 	:=
-	# $(addprefix $(BUILTIN_DIR)/, \
-	# 	pwd.c \
-	# 	echo.c \
-	# 	env.c \
-	# 	unset.c
-	# )
-	# $(addprefix $(EXEC_DIR)/, \
-	# 	builtin.c \
-	# 	exec.c \
-	# 	here_doc.c \
-	# 	path.c 
-	# )
 	main.c
 endef
 
