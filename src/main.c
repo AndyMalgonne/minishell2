@@ -3,14 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: andymalgonne <andymalgonne@student.42.f    +#+  +:+       +#+        */
+/*   By: abasdere <abasdere@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/27 09:50:52 by andymalgonn       #+#    #+#             */
-/*   Updated: 2025/01/27 09:57:11 by andymalgonn      ###   ########.fr       */
+/*   Updated: 2025/01/27 12:49:13 by abasdere         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <minishell.h>
+
+int	g_signal = 0;
 
 int	main(int argc, char **argv)
 {
