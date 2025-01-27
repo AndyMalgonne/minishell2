@@ -104,3 +104,8 @@ relib:
 .PHONY: norm
 norm: ; @make -C ${LIBFT_DIR} norm ${MAKE_FLAG}
 	@norminette ${SRC_DIR} ${INCLD_DIR}
+
+## WATCH NORM ##
+.PHONY: watch
+watch:
+	watch norminette ${SRC_DIR} ${INCLD_DIR}
