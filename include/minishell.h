@@ -6,7 +6,7 @@
 /*   By: abasdere <abasdere@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/27 09:51:13 by andymalgonn       #+#    #+#             */
-/*   Updated: 2025/01/27 19:17:39 by abasdere         ###   ########.fr       */
+/*   Updated: 2025/01/27 19:45:43 by abasdere         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,8 @@
 # include <termios.h>
 # include <stdio.h>
 # include <stdlib.h>
+
+# define ERR_MALLOC "Malloc error"
 
 typedef enum e_iotype
 {

@@ -6,7 +6,7 @@
 /*   By: abasdere <abasdere@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/27 13:27:14 by abasdere          #+#    #+#             */
-/*   Updated: 2025/01/27 19:39:34 by abasdere         ###   ########.fr       */
+/*   Updated: 2025/01/27 19:45:41 by abasdere         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ int	create_env(t_env **env, char **envp)
 	{
 		new_node = ft_calloc(1, sizeof(t_env));
 		if (new_node == NULL)
-			return (ft_putstr_fd("Malloc error", 2), 0);
+			return (ft_putstr_fd(ERR_MALLOC, 2), 0);
 		new_node->value = envp[i];
 		new_node->next = NULL;
 		*head = new_node;
