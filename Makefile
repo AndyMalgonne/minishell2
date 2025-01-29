@@ -54,6 +54,7 @@ define SRC 	:=
 	main.c
 	env.c
 	utils.c
+	prompt.c
 endef
 
 SRC 		:= ${strip ${SRC}}
