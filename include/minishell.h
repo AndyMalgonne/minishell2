@@ -6,7 +6,7 @@
 /*   By: abasdere <abasdere@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/27 09:51:13 by andymalgonn       #+#    #+#             */
-/*   Updated: 2025/01/27 19:45:43 by abasdere         ###   ########.fr       */
+/*   Updated: 2025/01/28 14:08:55 by abasdere         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,5 +60,7 @@ typedef struct s_tree
 }					t_tree;
 
 extern int			g_signal;
+
+void	*free_to_null(void *p);
 
 #endif

@@ -52,6 +52,7 @@ LIB 		:= ${strip ${LIB}}
 define SRC 	:=
 	main.c
 	env.c
+	utils.c
 endef
 
 SRC 		:= ${strip ${SRC}}
