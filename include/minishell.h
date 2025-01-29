@@ -6,7 +6,7 @@
 /*   By: abasdere <abasdere@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/27 09:51:13 by andymalgonn       #+#    #+#             */
-/*   Updated: 2025/01/28 14:08:55 by abasdere         ###   ########.fr       */
+/*   Updated: 2025/01/29 09:34:24 by abasdere         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,7 @@
 # include <stdio.h>
 # include <stdlib.h>
 
+# define PROMPT "> "
 # define ERR_MALLOC "Malloc error"
 
 typedef enum e_iotype
