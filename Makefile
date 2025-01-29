@@ -8,6 +8,7 @@ LDFLAGS 	:= -lreadline
 DEP_FLAGS	:= -MMD -MP
 MAKE_FLAG 	:= --no-print-directory --silent
 RM 			:= rm -rf
+IGNORE_RDLN	:= ignore_readline.supp
 
 ### COLORS ###
 DEFAULT    	:= \033[0m
@@ -85,6 +86,12 @@ fclean: clean
 	@${RM} ${NAME}
 
 re: fclean all
+
+run: $(NAME)
+	./$(NAME)
+
+test: $(NAME) $(IGNORE_RDLN)
+	valgrind --track-origins=yes --leak-check=full --show-leak-kinds=all --trace-children=yes --track-fds=yes --suppressions=$(IGNORE_RDLN) ./$(NAME)
 
 ### LIBFT ###
 ${LIBFT}:
