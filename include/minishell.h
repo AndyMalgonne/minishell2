@@ -6,7 +6,7 @@
 /*   By: abasdere <abasdere@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/27 09:51:13 by andymalgonn       #+#    #+#             */
-/*   Updated: 2025/01/27 19:45:43 by abasdere         ###   ########.fr       */
+/*   Updated: 2025/01/29 09:54:53 by abasdere         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,7 @@
 # include <stdio.h>
 # include <stdlib.h>
 
+# define PROMPT "> "
 # define ERR_MALLOC "Malloc error"
 
 typedef enum e_iotype
@@ -60,5 +61,9 @@ typedef struct s_tree
 }					t_tree;
 
 extern int			g_signal;
+
+void	*free_to_null(void *p);
+int		get_input(char **user_input);
+void	cleanup_user_input(char **user_input);
 
 #endif
