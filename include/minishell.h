@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   minishell.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: abasdere <abasdere@student.42.fr>          +#+  +:+       +#+        */
+/*   By: andymalgonne <andymalgonne@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/27 09:51:13 by andymalgonn       #+#    #+#             */
-/*   Updated: 2025/01/29 09:54:53 by abasdere         ###   ########.fr       */
+/*   Updated: 2025/01/30 08:50:29 by andymalgonn      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,7 +55,7 @@ typedef struct s_iofile
 
 typedef struct s_tree
 {
-	char			*cmd;
+	char			**cmd;
 	t_iofile		*io;
 	struct s_tree	*next;
 }					t_tree;
